@@ -6,6 +6,10 @@ name: NPM Package Publish
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - dev
+      - main
   workflow_dispatch:
 
 jobs:
@@ -28,7 +32,17 @@ jobs:
       - run: |
           pnpm install
           pnpm build
-      - run: npm publish --provenance --access public
+      - name: Check if version is already published
         working-directory: ./packages/tauri-api-adapter
+        run: |
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          npm view @kksh/tauri-api-adapter@$PACKAGE_VERSION
+        continue-on-error: true
+        id: check_version
+      - name: Publish
+        if: steps.check_version.outcome != 'success'
+        working-directory: ./packages/tauri-api-adapter
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
