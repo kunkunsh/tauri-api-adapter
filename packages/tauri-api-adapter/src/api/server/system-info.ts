@@ -9,6 +9,7 @@ import {
   disks,
   hostname,
   kernelVersion,
+  loadAverage,
   memoryInfo,
   name,
   networks,
@@ -21,6 +22,7 @@ import {
   staticInfo,
   totalMemory,
   totalSwap,
+  uptime,
   usedMemory,
   usedSwap
 } from 'tauri-plugin-system-info-api'
@@ -62,6 +64,8 @@ export function constructSystemInfoApi(permissions: SystemInfoPermission[]): ISy
       SystemInfoPermissionMap.refreshProcesses,
       permissions
     )(refreshProcesses),
-    batteries: checkPermission<SystemInfoPermission>(SystemInfoPermissionMap.batteries, permissions)(batteries)
+    batteries: checkPermission<SystemInfoPermission>(SystemInfoPermissionMap.batteries, permissions)(batteries),
+    uptime: checkPermission<SystemInfoPermission>(SystemInfoPermissionMap.uptime, permissions)(uptime),
+    loadAverage: checkPermission<SystemInfoPermission>(SystemInfoPermissionMap.loadAverage, permissions)(loadAverage)
   }
 }

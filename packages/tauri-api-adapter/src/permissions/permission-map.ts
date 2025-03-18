@@ -135,7 +135,9 @@ export const SystemInfoPermissionMap: Record<keyof ISystemInfo, SystemInfoPermis
   refreshMemory: ['system-info:all', 'system-info:memory'],
   refreshCpu: ['system-info:all', 'system-info:cpu'],
   refreshProcesses: ['system-info:all', 'system-info:process'],
-  batteries: ['system-info:all', 'system-info:battery']
+  batteries: ['system-info:all', 'system-info:battery'],
+  uptime: [],
+  loadAverage: []
 }
 
 export const ShellPermissionMap: Record<keyof IShellServer, ShellPermission[]> = {

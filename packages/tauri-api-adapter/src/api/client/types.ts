@@ -154,6 +154,7 @@ import type {
   debugCommand,
   disks,
   kernelVersion,
+  loadAverage,
   memoryInfo,
   networks,
   osVersion,
@@ -167,6 +168,7 @@ import type {
   name as sysinfoName,
   totalMemory,
   totalSwap,
+  uptime,
   usedMemory,
   usedSwap
 } from 'tauri-plugin-system-info-api'
@@ -387,6 +389,8 @@ export interface ISystemInfo {
   refreshProcesses: typeof refreshProcesses
   // debugCommand: typeof debugCommand
   batteries: typeof batteries
+  uptime: typeof uptime
+  loadAverage: typeof loadAverage
 }
 
 export interface INetwork {
