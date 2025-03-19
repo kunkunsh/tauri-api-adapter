@@ -51,8 +51,8 @@ importers:
         specifier: ~2.2.1
         version: 2.2.1
       kkrpc:
-        specifier: ^0.2.1
-        version: 0.2.1(typescript@5.4.5)
+        specifier: ^0.2.2
+        version: 0.2.2(typescript@5.4.5)
       tauri-api-adapter:
         specifier: workspace:*
         version: link:../../packages/tauri-api-adapter
@@ -109,8 +109,8 @@ importers:
   apps/extension:
     dependencies:
       kkrpc:
-        specifier: ^0.2.1
-        version: 0.2.1(typescript@5.5.3)
+        specifier: ^0.2.2
+        version: 0.2.2(typescript@5.5.3)
       tauri-api-adapter:
         specifier: workspace:*
         version: link:../../packages/tauri-api-adapter
@@ -170,8 +170,8 @@ importers:
         specifier: ^2.2.1
         version: 2.2.1
       kkrpc:
-        specifier: ^0.2.1
-        version: 0.2.1(typescript@5.6.3)
+        specifier: ^0.2.2
+        version: 0.2.2(typescript@5.6.3)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1328,8 +1328,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  kkrpc@0.2.1:
-    resolution: {integrity: sha512-LjB7OMMJYA5W+g7LcyCvYuskwMKOaF/TmeAkmHYZIEp1BUor69I/P7hNOZYAf2oAwpTbhSGOR7Bso+QhkjqxGA==}
+  kkrpc@0.2.2:
+    resolution: {integrity: sha512-EliGFPRf+dplMiqNipPUUj89WX9vEWfQkQU05ztbMfdK/SSgnHBbvm7QySGlEIlUb9Y55dSXPkROuxjHz2JbfA==}
     peerDependencies:
       typescript: ^5.0.0
 
@@ -3102,7 +3102,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  kkrpc@0.2.1(typescript@5.4.5):
+  kkrpc@0.2.2(typescript@5.4.5):
     dependencies:
       '@tauri-apps/plugin-shell': 2.2.0
       superjson: 2.2.2
@@ -3112,7 +3112,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  kkrpc@0.2.1(typescript@5.5.3):
+  kkrpc@0.2.2(typescript@5.5.3):
     dependencies:
       '@tauri-apps/plugin-shell': 2.2.0
       superjson: 2.2.2
@@ -3122,7 +3122,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  kkrpc@0.2.1(typescript@5.6.3):
+  kkrpc@0.2.2(typescript@5.6.3):
     dependencies:
       '@tauri-apps/plugin-shell': 2.2.0
       superjson: 2.2.2
